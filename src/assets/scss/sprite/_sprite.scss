@@ -1,0 +1,13 @@
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: #000;
+}
+
+/* stylelint-disable */
+	.icon-gulp {
+		font-size: calc(800 / 10) * 1rem;
+		width: calc(800 / 800) * 1em;
+	}
+/* stylelint-enable */

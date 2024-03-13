@@ -1,0 +1,22 @@
+// Mixin for usege svg sprinte in css
+@mixin icon($color, $icon-name) {
+	background-color: #{$color};
+	mask-image: url('../img/sprite.svg##{$icon-name}');
+}
+
+// Mixin for adding fonts
+@mixin font($font-family, $file-name, $weight) {
+	@font-face {
+		font-family: '#{$font-family}';
+		font-style: normal;
+		font-weight: #{$weight};
+		src: url('../fonts/#{$file-name}.woff2') format('woff2');
+		font-display: swap;
+	}
+}
+
+// Mixin for animation performance
+@mixin d3() {
+	transform: translateZ(0);
+	will-change: transform;
+}
