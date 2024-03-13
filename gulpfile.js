@@ -4,7 +4,7 @@ import paths from './gulp/config/paths.js';
 
 // Destructurization of objects
 const { gulp } = plugins;
-const { src } = paths;
+const { src, scss, components } = paths;
 
 // Importing task
 import { cleanTask } from './gulp/tasks/clean.js';
@@ -15,7 +15,10 @@ import { componentsTask } from './gulp/tasks/components.js';
 
 // Watsher
 const watcher = () => {
-	const watchers = [{ files: `${src}/**/*.pug`, task: pugTask }];
+	const watchers = [
+		{ files: `${src}/**/*.pug`, task: pugTask },
+		{ files: [scss.src, `${components}/**/*.scss`], task: stylesTask },
+	];
 
 	watchers.forEach(({ files, task }) => {
 		gulp.watch(files, task);
