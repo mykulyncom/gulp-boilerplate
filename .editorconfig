@@ -1,0 +1,21 @@
+root = true
+
+[*]
+end_of_line = lf
+indent_style = tab
+indent_size = 4
+charset = utf-8
+trim_trailing_whitespace = all
+insert_final_newline = true
+
+[*.min.*]
+indent_style = ignore
+trim_trailing_whitespace = false
+insert_final_newline = ignore
+
+[*.md]
+indent_style = space
+indent_size = 2
+
+[{package.json,.stylelintrc}]
+indent_style = space
