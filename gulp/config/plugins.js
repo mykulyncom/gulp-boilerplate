@@ -6,6 +6,8 @@ import noop from 'gulp-noop';
 import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
+import shell from 'gulp-shell';
+import yargs from 'yargs';
 
 // html/pug
 import gulpPug from 'gulp-pug';
@@ -32,6 +34,8 @@ export default {
 	rename,
 	plumber,
 	notify,
+	shell,
+	yargs,
 
 	// html/pug
 	gulpPug,
