@@ -1,9 +1,19 @@
 {
-  "name": "gulp-boilerplate",
-  "version": "0.0.2",
-  "main": "gulpfile.js",
-  "repository": "git@github.com:jixindev/gulp-boilerplate.git",
-  "author": "Serhii Mykulyn <serhiimykulyn@gmail.com>",
-  "license": "MIT",
-  "type": "module"
+    "name": "gulp-boilerplate",
+    "version": "0.0.3",
+    "main": "gulpfile.js",
+    "repository": "git@github.com:jixindev/gulp-boilerplate.git",
+    "author": "Serhii Mykulyn <serhiimykulyn@gmail.com>",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "dev": "gulp",
+        "build": "gulp build --build",
+        "compile": "gulp compile",
+        "pug": "gulp createModule"
+    },
+    "devDependencies": {
+        "fs-extra": "^11.2.0",
+        "gulp": "^4.0.2"
+    }
 }
