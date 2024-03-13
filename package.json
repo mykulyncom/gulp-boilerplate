@@ -1,6 +1,6 @@
 {
     "name": "gulp-boilerplate",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "main": "gulpfile.js",
     "repository": "git@github.com:jixindev/gulp-boilerplate.git",
     "author": "Serhii Mykulyn <serhiimykulyn@gmail.com>",
@@ -13,8 +13,10 @@
         "pug": "gulp createModule"
     },
     "devDependencies": {
+        "browser-sync": "^3.0.2",
         "fs-extra": "^11.2.0",
         "gulp": "^4.0.2",
+        "gulp-noop": "^1.0.1",
         "gulp-pug": "^5.0.0"
     }
 }
