@@ -7,10 +7,11 @@ const { gulp } = plugins;
 
 // Importing task
 import { cleanTask } from './gulp/tasks/clean.js';
+import { pugTask } from './gulp/tasks/pug.js';
 
 // Watsher
 const watcher = () => {};
 
-const dev = gulp.series(cleanTask);
+const dev = gulp.series(cleanTask, pugTask);
 
 gulp.task('default', dev);
