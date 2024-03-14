@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/github/package-json/v/jixindev/gulp-boilerplate?style=for-the-badge&color=blue">
 
 <br>
-Зроблено з ♥ by <a href="https://jixindev.com" target="_blank">Сергій Микулин</a>
+Автор: <a href="https://jixindev.com" target="_blank">Сергій Микулин</a>
 <br>
 <br>
 <a href="/readme-ua.md">English</a> | Українська
