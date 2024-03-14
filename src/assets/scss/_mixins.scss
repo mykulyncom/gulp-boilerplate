@@ -4,6 +4,12 @@
 	mask-image: url('../img/sprite.svg##{$icon-name}');
 }
 
+// Mixin for usage webp in css
+@mixin webp($name, $ext) {
+	background-image: url('../img/#{$name}/#{$name}.#{$ext}');
+	background-image: image-set(url('../img/#{$name}/#{$name}.webp'));
+}
+
 // Mixin for adding fonts
 @mixin font($font-family, $file-name, $weight) {
 	@font-face {

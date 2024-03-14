@@ -1,3 +1,4 @@
+import 'lazysizes';
 import noFollow from './modules/link-blank.js';
 import isWebP from './modules/check-webp.js';
 import dataImage from './modules/data-background.js';

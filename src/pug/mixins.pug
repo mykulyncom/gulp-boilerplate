@@ -1,3 +1,10 @@
 mixin icon(name)
 	svg(class=`icon icon-${name}`)
 		use(xlink:href=`./img/sprite.svg#${name}`)
+
+mixin webp(name, ext, alt)
+	- alt = alt || ''
+	picture
+		source.lazyload(srcset="./img/blurry.svg" data-srcset=`./img/${name}/${name}.webp` loading="lazy" decoding="async" type="image/webp")
+		source.lazyload(srcset="./img/blurry.svg" data-srcset=`./img/${name}/${name}.${ext}` loading="lazy" decoding="async" type=`image/${ext}`)
+		img.lazyload(src="./img/blurry.svg" data-src=`./img/${name}/${name}.${ext}` loading="lazy" decoding="async" alt=alt)

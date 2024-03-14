@@ -63,5 +63,8 @@
         "webpack": "^5.90.3",
         "webpack-stream": "^7.0.0",
         "yargs": "^17.7.2"
+    },
+    "dependencies": {
+        "lazysizes": "^5.3.2"
     }
 }
