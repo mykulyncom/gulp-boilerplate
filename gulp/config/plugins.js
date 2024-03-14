@@ -39,6 +39,10 @@ import newer from 'gulp-newer';
 import replace from 'gulp-replace';
 import cheerio from 'gulp-cheerio';
 import svgSprite from 'gulp-svg-sprite';
+import webP from 'gulp-webp';
+import imageMin from 'gulp-imagemin';
+import pngQuant from 'imagemin-pngquant';
+import responsive from 'gulp-optimize-images';
 
 export default {
     isDev: !process.argv.includes('--build'),
@@ -84,4 +88,8 @@ export default {
     replace,
     cheerio,
     svgSprite,
+    webP,
+    imageMin,
+    pngQuant,
+    responsive,
 };

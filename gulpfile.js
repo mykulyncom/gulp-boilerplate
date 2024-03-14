@@ -13,10 +13,11 @@ import { uncssTask } from './gulp/tasks/uncss.js';
 import { scriptsTask } from './gulp/tasks/scripts.js';
 import { svgTask } from './gulp/tasks/svg.js';
 import { spriteTask } from './gulp/tasks/sprite.js';
+import { webpTask } from './gulp/tasks/images.js';
 
 // Destructurization of objects
 const { gulp } = plugins;
-const { src, scss, font, js, svg, sprite } = paths;
+const { src, scss, font, js, svg, sprite, img } = paths;
 
 // Watsher
 const watcher = () => {
@@ -27,6 +28,7 @@ const watcher = () => {
         { files: [`${js.src}/**/*.js`, js.components], task: scriptsTask },
         { files: [svg.src, svg.components], task: svgTask },
         { files: [sprite.src, sprite.components], task: spriteTask },
+        { files: [img.src, img.components], tasl: webpTask },
     ];
 
     watchers.forEach(({ files, task }) => {
@@ -34,7 +36,15 @@ const watcher = () => {
     });
 };
 
-const mainTasks = gulp.parallel(pugTask, stylesTask, fontsTask, scriptsTask, svgTask, spriteTask);
+const mainTasks = gulp.parallel(
+    pugTask,
+    stylesTask,
+    fontsTask,
+    scriptsTask,
+    svgTask,
+    spriteTask,
+    webpTask,
+);
 
 const dev = gulp.series(cleanTask, mainTasks, gulp.parallel(watcher, serverTask));
 export const build = gulp.series(cleanTask, mainTasks, uncssTask);
