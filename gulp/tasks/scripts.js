@@ -10,7 +10,7 @@ const {
     noop,
     plumber,
     notify,
-    terserPlugin,
+    TerserPlugin,
     babel,
     uglify,
     webpackStream,
@@ -29,7 +29,7 @@ const config = {
         },
         optimization: {
             minimize: true,
-            minimizer: [new terserPlugin()],
+            minimizer: [new TerserPlugin()],
         },
         module: {
             rules: [

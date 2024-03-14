@@ -11,10 +11,11 @@ import { componentsTask } from './gulp/tasks/components.js';
 import { fontsTask } from './gulp/tasks/fonts.js';
 import { uncssTask } from './gulp/tasks/uncss.js';
 import { scriptsTask } from './gulp/tasks/scripts.js';
+import { svgTask } from './gulp/tasks/svg.js';
 
 // Destructurization of objects
 const { gulp } = plugins;
-const { src, scss, font, js } = paths;
+const { src, scss, font, js, svg } = paths;
 
 // Watsher
 const watcher = () => {
@@ -23,6 +24,7 @@ const watcher = () => {
         { files: [scss.src, scss.components], task: stylesTask },
         { files: [font.ttf, font.woff2], task: fontsTask },
         { files: [`${js.src}/**/*.js`, js.components], task: scriptsTask },
+        { files: [svg.src, svg.components], task: svgTask },
     ];
 
     watchers.forEach(({ files, task }) => {
@@ -30,7 +32,7 @@ const watcher = () => {
     });
 };
 
-const mainTasks = gulp.parallel(pugTask, stylesTask, fontsTask, scriptsTask);
+const mainTasks = gulp.parallel(pugTask, stylesTask, fontsTask, scriptsTask, svgTask);
 
 const dev = gulp.series(cleanTask, mainTasks, gulp.parallel(watcher, serverTask));
 export const build = gulp.series(cleanTask, mainTasks, uncssTask);

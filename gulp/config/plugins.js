@@ -29,8 +29,13 @@ import ttf2woff2 from 'gulp-ttf2woff2';
 // scripts
 import babel from 'gulp-babel';
 import webpackStream from 'webpack-stream';
-import terserPlugin from 'terser-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 import uglify from 'gulp-uglify';
+
+// images
+import svgmin from 'gulp-svgmin';
+import flatten from 'gulp-flatten';
+import newer from 'gulp-newer';
 
 export default {
     isDev: !process.argv.includes('--build'),
@@ -67,5 +72,10 @@ export default {
     uglify,
     babel,
     webpackStream,
-    terserPlugin,
+    TerserPlugin,
+
+    // images
+    svgmin,
+    flatten,
+    newer,
 };

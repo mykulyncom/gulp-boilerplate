@@ -26,4 +26,10 @@ export default {
         output: `${dist}/js`,
         build: `${build}/js`,
     },
+    svg: {
+        src: `${src}/assets/img/**/*.svg`,
+        components: `${components}/**/img/**/*.svg`,
+        output: `${dist}/img`,
+        build: `${build}/img`,
+    },
 };
