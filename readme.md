@@ -2,7 +2,6 @@
 <h1>Gulp Boilerplate</h1>
 <p>A boilerplate for creating static web projects using Gulp and WebPack</p>
 <img src="https://img.shields.io/github/package-json/v/jixindev/gulp-boilerplate?style=for-the-badge&color=blue">
-<img alt="GitHub Org's stars" src="https://img.shields.io/github/stars/gulp-boilerplate?style=for-the-badge&logo=github&logoColor=white&color=blue">
 
 <br>
 Mate with ♥ by <a href="https://jixindev.com" target="_blank">Serhii Mykulyn</a>
@@ -16,7 +15,6 @@ English | <a href="/readme-ua.md">Українська</a>
 - [Features](#features)
 - [Getting started](#getting-started)
 - [Usage](#usage)
-- [Working with files](#working-with-files)
 - [Project structure](#project-structure)
 - [Contributing](#contributing)
 
@@ -103,8 +101,6 @@ Run `yarn pug --add=ComponentName` to create a new Pug component with the specif
 ```bash
 yarn pug --add=ComponentName
 ```
-
-## Working with files
 
 ## Project structure
 
