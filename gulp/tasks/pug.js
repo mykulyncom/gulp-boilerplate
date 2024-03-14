@@ -8,19 +8,19 @@ const { src, dist, build } = paths;
 
 // Config
 const config = {
-	pretty: true,
-	verbose: true,
+    pretty: true,
+    verbose: true,
 };
 
 // Task
 export const pugTask = () => {
-	return (
-		gulp
-			.src(`${src}/*.pug`) // pug files
-			.pipe(gulpPug(config)) // pug compiling
-			.pipe(isDev ? gulp.dest(dist) : gulp.dest(build)) // output
+    return (
+        gulp
+            .src(`${src}/*.pug`) // pug files
+            .pipe(gulpPug(config)) // pug compiling
+            .pipe(isDev ? gulp.dest(dist) : gulp.dest(build)) // output
 
-			// browser reload
-			.pipe(isDev ? browserSync.stream() : noop())
-	);
+            // browser reload
+            .pipe(isDev ? browserSync.stream() : noop())
+    );
 };

@@ -2,10 +2,6 @@
 import plugins from './gulp/config/plugins.js';
 import paths from './gulp/config/paths.js';
 
-// Destructurization of objects
-const { gulp } = plugins;
-const { src, scss, components, font } = paths;
-
 // Importing task
 import { cleanTask } from './gulp/tasks/clean.js';
 import { pugTask } from './gulp/tasks/pug.js';
@@ -14,21 +10,27 @@ import { stylesTask } from './gulp/tasks/styles.js';
 import { componentsTask } from './gulp/tasks/components.js';
 import { fontsTask } from './gulp/tasks/fonts.js';
 import { uncssTask } from './gulp/tasks/uncss.js';
+import { scriptsTask } from './gulp/tasks/scripts.js';
+
+// Destructurization of objects
+const { gulp } = plugins;
+const { src, scss, font, js } = paths;
 
 // Watsher
 const watcher = () => {
-	const watchers = [
-		{ files: `${src}/**/*.pug`, task: pugTask },
-		{ files: [scss.src, `${components}/**/*.scss`], task: stylesTask },
-		{ files: [font.ttf, font.woff2] },
-	];
+    const watchers = [
+        { files: `${src}/**/*.pug`, task: pugTask },
+        { files: [scss.src, scss.components], task: stylesTask },
+        { files: [font.ttf, font.woff2], task: fontsTask },
+        { files: [`${js.src}/**/*.js`, js.components], task: scriptsTask },
+    ];
 
-	watchers.forEach(({ files, task }) => {
-		gulp.watch(files, task);
-	});
+    watchers.forEach(({ files, task }) => {
+        gulp.watch(files, task);
+    });
 };
 
-const mainTasks = gulp.parallel(pugTask, stylesTask, fontsTask);
+const mainTasks = gulp.parallel(pugTask, stylesTask, fontsTask, scriptsTask);
 
 const dev = gulp.series(cleanTask, mainTasks, gulp.parallel(watcher, serverTask));
 export const build = gulp.series(cleanTask, mainTasks, uncssTask);

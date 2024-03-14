@@ -8,25 +8,25 @@ const { font } = paths;
 
 // Config
 const config = {
-	plumber: {
-		errorHandler: notify.onError((error) => 'Error: <%= error.message %>'),
-	},
+    plumber: {
+        errorHandler: notify.onError((error) => 'Error: <%= error.message %>'),
+    },
 };
 
 // Task
 export const fontsTask = () => {
-	return (
-		gulp
-			.src(font.woff2) // woff2 files
-			.pipe(plumber(config.plumber))
-			.pipe(isDev ? gulp.dest(font.output) : gulp.dest(font.build)) // output woff2
+    return (
+        gulp
+            .src(font.woff2) // woff2 files
+            .pipe(plumber(config.plumber))
+            .pipe(isDev ? gulp.dest(font.output) : gulp.dest(font.build)) // output woff2
 
-			// ttf files
-			.pipe(gulp.src(font.ttf)) // ttf files
-			.pipe(ttf2woff2()) // conversion ttf to woff2
-			.pipe(isDev ? gulp.dest(font.output) : gulp.dest(font.build)) // output
+            // ttf files
+            .pipe(gulp.src(font.ttf)) // ttf files
+            .pipe(ttf2woff2()) // conversion ttf to woff2
+            .pipe(isDev ? gulp.dest(font.output) : gulp.dest(font.build)) // output
 
-			// browser reload
-			.pipe(isDev ? browserSync.stream() : noop())
-	);
+            // browser reload
+            .pipe(isDev ? browserSync.stream() : noop())
+    );
 };

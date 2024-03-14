@@ -1,0 +1,29 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": ["eslint:recommended", "airbnb-base"],
+	"overrides": [],
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"requireConfigFile": false,
+		"sourceType": "module"
+	},
+	"rules": {
+		"import/prefer-default-export": "off",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{ "devDependencies": true, "optionalDependencies": true, "peerDependencies": true }
+		],
+		"import/extensions": "off",
+		"no-console": "off",
+		"no-multi-assign": "off",
+		"no-param-reassign": "off",
+		"arrow-body-style": "off",
+		"object-curly-newline": "off",
+		"indent": ["error", 4]
+	}
+}

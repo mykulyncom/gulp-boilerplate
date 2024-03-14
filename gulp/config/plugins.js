@@ -26,34 +26,46 @@ import sassGlob from 'gulp-sass-glob';
 // fonts
 import ttf2woff2 from 'gulp-ttf2woff2';
 
+// scripts
+import babel from 'gulp-babel';
+import webpackStream from 'webpack-stream';
+import terserPlugin from 'terser-webpack-plugin';
+import uglify from 'gulp-uglify';
+
 export default {
-	isDev: !process.argv.includes('--build'),
+    isDev: !process.argv.includes('--build'),
 
-	// base
-	gulp,
-	fs,
-	browserSync,
-	noop,
-	rename,
-	plumber,
-	notify,
-	shell,
-	yargs,
+    // base
+    gulp,
+    fs,
+    browserSync,
+    noop,
+    rename,
+    plumber,
+    notify,
+    shell,
+    yargs,
 
-	// html/pug
-	gulpPug,
+    // html/pug
+    gulpPug,
 
-	// styles
-	gsass,
-	sass,
-	postCss,
-	autoPrefixer,
-	smq,
-	cleanCss,
-	sourceMaps,
-	uncss,
-	sassGlob,
+    // styles
+    gsass,
+    sass,
+    postCss,
+    autoPrefixer,
+    smq,
+    cleanCss,
+    sourceMaps,
+    uncss,
+    sassGlob,
 
-	//fonts
-	ttf2woff2,
+    // fonts
+    ttf2woff2,
+
+    // scripts
+    uglify,
+    babel,
+    webpackStream,
+    terserPlugin,
 };

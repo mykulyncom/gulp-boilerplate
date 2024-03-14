@@ -8,15 +8,15 @@ const { dist } = paths;
 
 // Config
 const config = {
-	server: {
-		baseDir: dist,
-	},
-	open: false,
-	notify: false,
-	port: 3000,
+    server: {
+        baseDir: dist,
+    },
+    open: false,
+    notify: false,
+    port: 3000,
 };
 
 // Task
 export const serverTask = () => {
-	browserSync.init(config);
+    browserSync.init(config);
 };

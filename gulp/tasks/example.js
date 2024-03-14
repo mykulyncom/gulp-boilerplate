@@ -8,21 +8,21 @@ const { src, dist, build } = paths;
 
 // Config
 const config = {
-	plumber: {
-		errorHandler: notify.onError((error) => 'Error: <%= error.message %>'),
-	},
+    plumber: {
+        errorHandler: notify.onError((error) => 'Error: <%= error.message %>'),
+    },
 };
 
 // Task
 export const nameTask = () => {
-	return (
-		gulp
-			.src(src) // source files
-			.pipe(plumber(config.plumber))
-			.pipe(noop()) // pipe
-			.pipe(isDev ? gulp.dest(dist) : gulp.dest(build)) // output
+    return (
+        gulp
+            .src(src) // source files
+            .pipe(plumber(config.plumber))
+            .pipe(noop()) // pipe
+            .pipe(isDev ? gulp.dest(dist) : gulp.dest(build)) // output
 
-			// browser reload
-			.pipe(isDev ? browserSync.stream() : noop())
-	);
+            // browser reload
+            .pipe(isDev ? browserSync.stream() : noop())
+    );
 };

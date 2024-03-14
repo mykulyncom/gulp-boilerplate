@@ -8,28 +8,28 @@ const { dist, scss } = paths;
 
 // Config
 const config = {
-	plumber: {
-		errorHandler: notify.onError((error) => 'Error: <%= error.message %>'),
-	},
-	clean: {
-		level: 2,
-	},
+    plumber: {
+        errorHandler: notify.onError((error) => 'Error: <%= error.message %>'),
+    },
+    clean: {
+        level: 2,
+    },
 };
 
 // Task
 export const uncssTask = () => {
-	return gulp
-		.src(`${scss.output}/main.min.css`, { allowEmpty: true }) // source files
-		.pipe(plumber(config.plumber))
-		.pipe(
-			postCss([
-				uncss({
-					html: [`${dist}/**/*.html`],
-					media: ['print'],
-					ignore: [],
-				}),
-			]),
-		) // pipe
-		.pipe(cleanCss(config.clean))
-		.pipe(gulp.dest(scss.build)); // output
+    return gulp
+        .src(`${scss.output}/main.min.css`, { allowEmpty: true }) // source files
+        .pipe(plumber(config.plumber))
+        .pipe(
+            postCss([
+                uncss({
+                    html: [`${dist}/**/*.html`],
+                    media: ['print'],
+                    ignore: [],
+                }),
+            ]),
+        ) // pipe
+        .pipe(cleanCss(config.clean))
+        .pipe(gulp.dest(scss.build)); // output
 };
