@@ -13,4 +13,10 @@ export default {
 		output: `${dist}/css`,
 		build: `${build}/css`,
 	},
+	font: {
+		ttf: `${src}/assets/fonts/**/*.ttf`,
+		woff2: `${src}/assets/fonts/**/*.woff2`,
+		output: `${dist}/fonts`,
+		build: `${build}/fonts`,
+	},
 };

@@ -23,6 +23,9 @@ import sourceMaps from 'gulp-sourcemaps';
 import uncss from 'postcss-uncss';
 import sassGlob from 'gulp-sass-glob';
 
+// fonts
+import ttf2woff2 from 'gulp-ttf2woff2';
+
 export default {
 	isDev: !process.argv.includes('--build'),
 
@@ -50,4 +53,7 @@ export default {
 	sourceMaps,
 	uncss,
 	sassGlob,
+
+	//fonts
+	ttf2woff2,
 };

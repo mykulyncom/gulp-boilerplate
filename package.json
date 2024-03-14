@@ -1,6 +1,6 @@
 {
     "name": "gulp-boilerplate",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "main": "gulpfile.js",
     "repository": "git@github.com:jixindev/gulp-boilerplate.git",
     "author": "Serhii Mykulyn <serhiimykulyn@gmail.com>",
@@ -28,6 +28,7 @@
         "gulp-sass-glob": "^1.1.0",
         "gulp-shell": "^0.8.0",
         "gulp-sourcemaps": "^3.0.0",
+        "gulp-ttf2woff2": "^4.0.1",
         "postcss": "^8.4.35",
         "postcss-sort-media-queries": "^5.2.0",
         "postcss-uncss": "^0.17.0",
