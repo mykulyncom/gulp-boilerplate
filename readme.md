@@ -17,6 +17,7 @@ English | <a href="/readme-ua.md">Українська</a>
 - [Usage](#usage)
 - [Project structure](#project-structure)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
