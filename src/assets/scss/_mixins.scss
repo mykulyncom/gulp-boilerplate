@@ -1,6 +1,6 @@
 // Mixin for usege svg sprinte in css
 @mixin icon($color, $icon-name) {
-	background-color: #{$color};
+	background-color: $color;
 	mask-image: url('../img/sprite.svg##{$icon-name}');
 }
 
