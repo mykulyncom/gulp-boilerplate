@@ -1,6 +1,6 @@
 {
     "name": "gulp-boilerplate",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "main": "gulpfile.js",
     "repository": "git@github.com:jixindev/gulp-boilerplate.git",
     "author": "Serhii Mykulyn <serhiimykulyn@gmail.com>",
@@ -64,7 +64,5 @@
         "webpack-stream": "^7.0.0",
         "yargs": "^17.7.2"
     },
-    "dependencies": {
-        "lazysizes": "^5.3.2"
-    }
+    "dependencies": {}
 }

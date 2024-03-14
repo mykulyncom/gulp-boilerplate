@@ -1,10 +1,66 @@
+
 mixin icon(name)
 	svg(class=`icon icon-${name}`)
 		use(xlink:href=`./img/sprite.svg#${name}`)
 
+
 mixin webp(name, ext, alt)
 	- alt = alt || ''
 	picture
-		source.lazyload(srcset="./img/blurry.svg" data-srcset=`./img/${name}/${name}.webp` loading="lazy" decoding="async" type="image/webp")
-		source.lazyload(srcset="./img/blurry.svg" data-srcset=`./img/${name}/${name}.${ext}` loading="lazy" decoding="async" type=`image/${ext}`)
-		img.lazyload(src="./img/blurry.svg" data-src=`./img/${name}/${name}.${ext}` loading="lazy" decoding="async" alt=alt)
+		source(srcset=`./img/${name}/${name}.webp` loading="lazy" decoding="async" type="image/webp")
+		source(srcset=`./img/${name}/${name}.${ext}` loading="lazy" decoding="async" type="image/${ext}")
+		img(src=`./img/${name}/${name}.${ext}` loading="lazy" decoding="async" alt=alt)
+
+mixin getImg(name, ext, width, alt)
+	- bp = bp || ''
+	- alt = alt || ''
+	source(srcset=`./img/${name}/${name}${width}.webp` type="image/webp" loading='lazy' decoding='async' alt=alt)
+	img(src=`./img/${name}/${name}${width}.${ext}` loading='lazy' type=`image/${ext}` decoding='async' alt=alt)
+
+mixin getSrcSet(name, ext, media, width, alt)
+	- bp = bp || ''
+	- alt = alt || ''
+	source(media=`(max-width: ${media}px)` srcset=`./img/${name}/${name}${width}.webp` type="image/webp" loading='lazy' decoding='async' alt=alt)
+	source(media=`(max-width: ${media}px)` srcset=`./img/${name}/${name}${width}.${ext}` type=`image/${ext}` loading='lazy' decoding='async' alt=alt)
+
+mixin res(name, ext, bp, alt)
+	- alt = alt || ''
+
+	picture
+		case bp
+			when 400
+				- var maxWidth = -500
+				- var sizes = [ { media: 400, width: -500} ]
+				each size, index in sizes
+					+getSrcSet(name, ext, size.media, size.width, alt)
+				+getImg(name, ext, maxWidth, alt)
+			when 768
+				- var maxWidth = -868
+				- var sizes = [ { media: 400, width: -500}, { media: 768, width: -868} ]
+				each size, index in sizes
+					+getSrcSet(name, ext, size.media, size.width, alt)
+				+getImg(name, ext, maxWidth, alt)
+			when 992
+				- var maxWidth = -1092
+				- var sizes = [ { media: 400, width: -500}, { media: 768, width: -868}, { media: 992, width: -1092} ]
+				each size, index in sizes
+					+getSrcSet(name, ext, size.media, size.width, alt)
+				+getImg(name, ext, maxWidth, alt)
+			when 1280
+				- var maxWidth = -1380
+				- var sizes = [ { media: 400, width: -500}, { media: 768, width: -868}, { media: 992, width: -1092}, { media: 1280, width: -1380} ]
+				each size, index in sizes
+					+getSrcSet(name, ext, size.media, size.width, alt)
+				+getImg(name, ext, maxWidth, alt)
+			when 1600
+				- var maxWidth = -1700
+				- var sizes = [ { media: 400, width: -500}, { media: 768, width: -868}, { media: 992, width: -1092}, { media: 1280, width: -1380}, { media: 1600, width: -1700} ]
+				each size, index in sizes
+					+getSrcSet(name, ext, size.media, size.width, alt)
+				+getImg(name, ext, maxWidth, alt)
+			default
+				- var maxWidth = ''
+				- var sizes = [ { media: 400, width: -500}, { media: 768, width: -868}, { media: 992, width: -1092}, { media: 1280, width: -1380}, { media: 1600, width: -1700} ]
+				each size, index in sizes
+					+getSrcSet(name, ext, size.media, size.width, alt)
+				+getImg(name, ext, maxWidth, alt)
