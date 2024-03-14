@@ -63,7 +63,7 @@ export const spriteTask = () => {
             .pipe(cheerio(config.cheerio)) // removing attributes
             .pipe(replace('>', '>'))
             .pipe(svgSprite(config.sprite)) // create sprite
-            .pipe(isDev ? gulp.dest(sprite.output) : gulp.dest(sprite.build)) // output
+            .pipe(isDev ? gulp.dest(sprite.dist) : gulp.dest(sprite.build)) // output
 
             // browser reload
             .pipe(isDev ? browserSync.stream() : noop())

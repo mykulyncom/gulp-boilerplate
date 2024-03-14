@@ -19,12 +19,12 @@ export const fontsTask = () => {
         gulp
             .src(font.woff2) // woff2 files
             .pipe(plumber(config.plumber))
-            .pipe(isDev ? gulp.dest(font.output) : gulp.dest(font.build)) // output woff2
+            .pipe(isDev ? gulp.dest(font.dist) : gulp.dest(font.build)) // output woff2
 
             // ttf files
             .pipe(gulp.src(font.ttf)) // ttf files
             .pipe(ttf2woff2()) // conversion ttf to woff2
-            .pipe(isDev ? gulp.dest(font.output) : gulp.dest(font.build)) // output
+            .pipe(isDev ? gulp.dest(font.dist) : gulp.dest(font.build)) // output
 
             // browser reload
             .pipe(isDev ? browserSync.stream() : noop())

@@ -19,7 +19,7 @@ const config = {
 // Task
 export const uncssTask = () => {
     return gulp
-        .src(`${scss.output}/main.min.css`, { allowEmpty: true }) // source files
+        .src(`${scss.dist}/main.min.css`, { allowEmpty: true }) // source files
         .pipe(plumber(config.plumber))
         .pipe(
             postCss([

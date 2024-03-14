@@ -12,31 +12,37 @@ export default {
     scss: {
         src: `${assets}/scss/**/*.scss`,
         components: `${components}/**/*.scss`,
-        output: `${dist}/css`,
+        dist: `${dist}/css`,
         build: `${build}/css`,
     },
     font: {
         ttf: `${assets}/fonts/**/*.ttf`,
         woff2: `${assets}/fonts/**/*.woff2`,
-        output: `${dist}/fonts`,
+        dist: `${dist}/fonts`,
         build: `${build}/fonts`,
     },
     js: {
         src: `${assets}/js`,
         components: `${components}/**/*.js`,
-        output: `${dist}/js`,
+        dist: `${dist}/js`,
         build: `${build}/js`,
     },
     svg: {
         src: `${assets}/img/**/*.svg`,
         components: `${components}/**/img/**/*.svg`,
-        output: `${dist}/img`,
+        dist: `${dist}/img`,
         build: `${build}/img`,
     },
     sprite: {
         src: `${assets}/icons/*.svg`,
         components: `${components}/**/icons/*.svg`,
-        output: `${dist}/img`,
+        dist: `${dist}/img`,
+        build: `${build}/img`,
+    },
+    img: {
+        src: `${assets}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        components: `${components}/**/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        dist: `${dist}/img`,
         build: `${build}/img`,
     },
 };

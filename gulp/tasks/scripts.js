@@ -66,7 +66,7 @@ export const scriptsTask = () => {
             .pipe(webpackStream(config.webpack)) // webpack settings
             .pipe(babel()) // use next generation js with babel
             .pipe(isDev ? noop() : uglify()) // minify srcipts
-            .pipe(isDev ? gulp.dest(js.output) : gulp.dest(js.build)) // output js
+            .pipe(isDev ? gulp.dest(js.dist) : gulp.dest(js.build)) // output js
 
             // browser reload
             .pipe(isDev ? browserSync.stream() : noop())

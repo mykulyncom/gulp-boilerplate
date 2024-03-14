@@ -57,7 +57,7 @@ export const stylesTask = () => {
             .pipe(rename(config.rename)) // add suffix min to main.css
             .pipe(isDev ? noop() : cleanCss(config.clean)) // clean and minify css
             .pipe(isDev ? sourceMaps.write('../maps') : noop()) // write source maps
-            .pipe(isDev ? gulp.dest(scss.output) : gulp.dest(scss.build)) // output css
+            .pipe(isDev ? gulp.dest(scss.dist) : gulp.dest(scss.build)) // output css
 
             // browser reload
             .pipe(isDev ? browserSync.stream() : noop())

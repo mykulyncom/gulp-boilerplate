@@ -21,8 +21,8 @@ export const svgTask = () => {
             .pipe(plumber(config.plumber))
             .pipe(isDev ? noop() : svgmin())
             .pipe(flatten({ includeParents: [0, 0] })) // delete folder structure
-            .pipe(isDev ? newer(svg.output) : noop()) // check if the file have changed
-            .pipe(isDev ? gulp.dest(svg.output) : gulp.dest(svg.build)) // output
+            .pipe(isDev ? newer(svg.dist) : noop()) // check if the file have changed
+            .pipe(isDev ? gulp.dest(svg.dist) : gulp.dest(svg.build)) // output
 
             // browser reload
             .pipe(isDev ? browserSync.stream() : noop())
