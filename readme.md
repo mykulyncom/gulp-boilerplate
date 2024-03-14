@@ -142,4 +142,4 @@ Contributions are welcome! If you have suggestions, enhancements, or bug fixes, 
 
 ## License
 
-This project is licensed under the MIT License. Feel free to use, modify, and distribute this code for personal or commercial projects.
+This project is licensed under the [MIT License](/LICENSE). Feel free to use, modify, and distribute this code for personal or commercial projects.
