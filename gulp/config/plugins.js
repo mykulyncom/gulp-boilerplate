@@ -36,6 +36,9 @@ import uglify from 'gulp-uglify';
 import svgmin from 'gulp-svgmin';
 import flatten from 'gulp-flatten';
 import newer from 'gulp-newer';
+import replace from 'gulp-replace';
+import cheerio from 'gulp-cheerio';
+import svgSprite from 'gulp-svg-sprite';
 
 export default {
     isDev: !process.argv.includes('--build'),
@@ -78,4 +81,7 @@ export default {
     svgmin,
     flatten,
     newer,
+    replace,
+    cheerio,
+    svgSprite,
 };
