@@ -3,5 +3,6 @@
 @import './fonts';
 @import './sprite/sprite';
 @import './common';
+
  // Import all modules
-@import "../../pug/**/*.scss";
+@import "../../pug/**/*";

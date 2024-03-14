@@ -13,7 +13,7 @@ import { uncssTask } from './gulp/tasks/uncss.js';
 import { scriptsTask } from './gulp/tasks/scripts.js';
 import { svgTask } from './gulp/tasks/svg.js';
 import { spriteTask } from './gulp/tasks/sprite.js';
-import { webpTask } from './gulp/tasks/images.js';
+import { webpTask, imgTask } from './gulp/tasks/images.js';
 
 // Destructurization of objects
 const { gulp } = plugins;
@@ -28,7 +28,8 @@ const watcher = () => {
         { files: [`${js.src}/**/*.js`, js.components], task: scriptsTask },
         { files: [svg.src, svg.components], task: svgTask },
         { files: [sprite.src, sprite.components], task: spriteTask },
-        { files: [img.src, img.components], tasl: webpTask },
+        { files: [img.src, img.components], task: webpTask },
+        { files: [img.src, img.components], task: imgTask },
     ];
 
     watchers.forEach(({ files, task }) => {
@@ -44,6 +45,7 @@ const mainTasks = gulp.parallel(
     svgTask,
     spriteTask,
     webpTask,
+    imgTask,
 );
 
 const dev = gulp.series(cleanTask, mainTasks, gulp.parallel(watcher, serverTask));

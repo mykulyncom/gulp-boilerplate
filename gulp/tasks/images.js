@@ -26,6 +26,13 @@ const config = {
     plumber: {
         errorHandler: notify.onError((error) => 'Error: <%= error.message %>'),
     },
+    imageMin: {
+        progressive: true,
+        svgoPlugin: [{ removeViewBox: false }],
+        interlanced: true,
+        optimizationLevel: 3,
+        use: [pngQuant()],
+    },
 };
 
 // Task
@@ -43,6 +50,26 @@ export const webpTask = () => {
             )
             .pipe(isDev ? newer(img.dist) : noop()) // check if the file have changed
             .pipe(isDev ? gulp.dest(img.dist) : gulp.dest(img.build)) // output
+
+            // browser reload
+            .pipe(isDev ? browserSync.stream() : noop())
+    );
+};
+
+export const imgTask = () => {
+    return (
+        gulp
+            .src([img.src, img.components]) // source files
+            .pipe(plumber(config.plumber))
+            .pipe(flatten({ includeParents: [0, 0] })) // delete folder structure
+            .pipe(
+                rename((file) => {
+                    file.dirname = path.join(file.dirname, file.basename);
+                }),
+            )
+            .pipe(isDev ? newer(img.dist) : noop()) // check if the file have changed
+            .pipe(isDev ? noop() : imageMin(config.imageMin))
+            .pipe(isDev ? gulp.dest(img.dist) : gulp.dest(img.build)) // output images
 
             // browser reload
             .pipe(isDev ? browserSync.stream() : noop())
