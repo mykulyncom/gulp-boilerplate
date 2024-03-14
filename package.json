@@ -1,6 +1,6 @@
 {
     "name": "gulp-boilerplate",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "main": "gulpfile.js",
     "repository": "git@github.com:jixindev/gulp-boilerplate.git",
     "author": "Serhii Mykulyn <serhiimykulyn@gmail.com>",
