@@ -1,6 +1,6 @@
 {
     "name": "gulp-boilerplate",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "main": "gulpfile.js",
     "repository": "git@github.com:jixindev/gulp-boilerplate.git",
     "author": "Serhii Mykulyn <serhiimykulyn@gmail.com>",
@@ -36,6 +36,7 @@
         "stylelint": "^16.2.1",
         "stylelint-config-recess-order": "^5.0.0",
         "stylelint-config-standard-scss": "^13.0.0",
+        "uncss": "^0.17.3",
         "yargs": "^17.7.2"
     }
 }

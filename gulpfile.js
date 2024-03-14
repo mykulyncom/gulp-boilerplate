@@ -13,6 +13,7 @@ import { serverTask } from './gulp/tasks/server.js';
 import { stylesTask } from './gulp/tasks/styles.js';
 import { componentsTask } from './gulp/tasks/components.js';
 import { fontsTask } from './gulp/tasks/fonts.js';
+import { uncssTask } from './gulp/tasks/uncss.js';
 
 // Watsher
 const watcher = () => {
@@ -30,6 +31,7 @@ const watcher = () => {
 const mainTasks = gulp.parallel(pugTask, stylesTask, fontsTask);
 
 const dev = gulp.series(cleanTask, mainTasks, gulp.parallel(watcher, serverTask));
+export const build = gulp.series(cleanTask, mainTasks, uncssTask);
 export const compile = gulp.series(cleanTask, mainTasks);
 export const createComponent = gulp.series(componentsTask);
 
