@@ -24,10 +24,8 @@ export const componentsTask = () => {
         .pipe(
             shell(
                 [
-                    `mkdir -p ${components}/${componentName}/img`,
-                    `mkdir -p ${components}/${componentName}/icons`,
-                    `touch ${components}/${componentName}/img/.gitkeep`,
-                    `touch ${components}/${componentName}/icons/.gitkeep`,
+                    `mkdir -p ${components}/${componentName}/{img,icons}`,
+                    `touch ${components}/${componentName}/{img,icons}/.gitkeep`,
                     `touch ${components}/${componentName}/${componentName}.js`,
                     `touch ${components}/${componentName}/${componentName}.pug`,
                     `touch ${components}/${componentName}/_${componentName}.scss`,
