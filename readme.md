@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/github/package-json/v/jixindev/gulp-boilerplate?style=for-the-badge&color=blue">
 
 <br>
-Author: <a href="https://jixindev.com" target="_blank">Serhii Mykulyn</a>
+Author: <a href="https://mykulyn.com" target="_blank">Serhii Mykulyn</a>
 <br>
 <br>
 English | <a href="/readme-ua.md">Українська</a>
