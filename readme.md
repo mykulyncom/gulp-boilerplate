@@ -42,7 +42,6 @@ English | <a href="/readme-ua.md">Українська</a>
   - [x] SVG optimization
   - [x] Conversion images to WebP
   - [x] PNG/JPG optimization
-  - [x] Responsive images
   - [x] Lazy loading
   - [x] Automatic creation of sprites
 - [x] Converting ttf to woff2
@@ -60,7 +59,7 @@ mkdir NewProject && cd NewProject
 2. Clone or download this repository
 
 ```bash
-git clone git@github.com:jixindev/gulp-boilerplate.git .; rm -rf trunk .git
+git clone git@github.com:mykulyncom/gulp-boilerplate.git .; rm -rf trunk .git
 ```
 
 3. Install dependencies
@@ -73,10 +72,10 @@ pnpm i
 
 **Development**
 
-Run `pnpm dev` to start the development server. This will compile Sass, minify JavaScript, optimize images, and set up live reloading.
+Run `pnpm start` to start the development server. This will compile Sass, minify JavaScript, optimize images, and set up live reloading.
 
 ```bash
-pnpm dev
+pnpm start
 ```
 
 **Compilation**

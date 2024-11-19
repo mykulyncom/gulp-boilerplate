@@ -42,7 +42,6 @@
   - [x] Оптимізація SVG
   - [x] Конвертація зображень в WebP
   - [x] Оптимізація PNG/JPG
-  - [x] Адаптивні зображення
   - [x] Ліниве завантаження
   - [x] Автоматичне створення спрайтів
 - [x] Конвертація ttf в woff2
@@ -60,7 +59,7 @@ mkdir NewProject && cd NewProject
 2. Клонуйте або завантажте цей репозиторій
 
 ```bash
-git clone git@github.com:jixindev/gulp-boilerplate.git .; rm -rf trunk .git
+git clone git@github.com:mykulyncom/gulp-boilerplate.git .; rm -rf trunk .git
 ```
 
 3. Встановіть залежності
@@ -73,10 +72,10 @@ pnpm install
 
 **Розробка**
 
-Виконайте `pnpm dev`, щоб запустити сервер розробки. Це компілюватиме Sass, мініфікуватиме JavaScript, оптимізуватиме зображення та налаштує локальний сервер.
+Виконайте `pnpm start`, щоб запустити сервер розробки. Це компілюватиме Sass, мініфікуватиме JavaScript, оптимізуватиме зображення та налаштує локальний сервер.
 
 ```bash
-pnpm dev
+pnpm start
 ```
 
 **Компіляція**
