@@ -1,3 +1,5 @@
+@use 'mixins' as mx;
+
 // 100 - Thin (Hailine)
 // 200 - Extra Light (Ultra Light)
 // 300 - Light
@@ -11,4 +13,4 @@
 
 // @include font('FontName', 'fileName', 'weight');
 
-@include font('OpenSans', 'OpenSans-Regular', 400);
+@include mx.font('OpenSans', 'OpenSans-Regular', 400);

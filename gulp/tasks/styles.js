@@ -31,6 +31,8 @@ const config = {
     },
     sass: {
         outputStyle: 'expanded',
+        silenceDeprecations: ['legacy-js-api', 'import'],
+        quietDeps: true,
     },
     rename: {
         suffix: '.min',

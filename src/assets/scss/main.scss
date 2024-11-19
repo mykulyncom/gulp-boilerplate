@@ -1,8 +1,8 @@
-@import './normalize';
-@import './mixins';
-@import './fonts';
-@import './sprite/sprite';
-@import './common';
+@use './normalize';
+@use './mixins';
+@use './fonts';
+@use './sprite/sprite';
+@use './common';
 
- // Import all modules
-@import "../../pug/**/*";
+// Import all modules
+@import '../../pug/**/*';

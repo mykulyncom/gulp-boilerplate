@@ -7,7 +7,7 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "dev": "gulp",
+        "start": "gulp",
         "build": "gulp build --build",
         "compile": "gulp compile",
         "pug": "gulp createComponent"
