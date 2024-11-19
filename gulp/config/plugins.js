@@ -42,7 +42,6 @@ import svgSprite from 'gulp-svg-sprite';
 import webP from 'gulp-webp';
 import imageMin from 'gulp-imagemin';
 import pngQuant from 'imagemin-pngquant';
-import responsive from 'gulp-optimize-images';
 
 export default {
     isDev: !process.argv.includes('--build'),
@@ -91,5 +90,4 @@ export default {
     webP,
     imageMin,
     pngQuant,
-    responsive,
 };

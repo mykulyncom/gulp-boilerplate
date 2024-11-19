@@ -40,8 +40,8 @@ export default {
         build: `${build}/img`,
     },
     img: {
-        src: `${assets}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-        components: `${components}/**/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        src: `${assets}/img/**/*.{jpg,jpeg,png,webp}`,
+        components: `${components}/**/img/**/*.{jpg,jpeg,png,webp}`,
         dist: `${dist}/img`,
         build: `${build}/img`,
     },
