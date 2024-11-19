@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Gulp Boilerplate</h1>
 <p>Шаблон для створення статичних веб проєктів використовуючи Gulp та WebPack</p>
-<img src="https://img.shields.io/github/package-json/v/jixindev/gulp-boilerplate?style=for-the-badge&color=blue">
+<img src="https://img.shields.io/github/package-json/v/mykulyncom/gulp-boilerplate?style=for-the-badge&color=blue">
 
 <br>
 Автор: <a href="https://jixindev.com" target="_blank">Сергій Микулин</a>

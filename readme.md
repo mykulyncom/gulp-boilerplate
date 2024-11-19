@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Gulp Boilerplate</h1>
 <p>A boilerplate for creating static web projects using Gulp and WebPack</p>
-<img src="https://img.shields.io/github/package-json/v/jixindev/gulp-boilerplate?style=for-the-badge&color=blue">
+<img src="https://img.shields.io/github/package-json/v/mykulyncom/gulp-boilerplate?style=for-the-badge&color=blue">
 
 <br>
 Author: <a href="https://mykulyn.com" target="_blank">Serhii Mykulyn</a>
