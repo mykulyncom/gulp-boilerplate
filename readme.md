@@ -23,7 +23,7 @@ English | <a href="/readme-ua.md">Українська</a>
 
 - [x] HTML:
   - [x] Pug compiling
-  - [x] Creating components `yarn pug --add=ComponentName`
+  - [x] Creating components `pnpm pug --add=ComponentName`
 - [x] Styles:
   - [x] Compiling SCSS
   - [x] Autoprefixer
@@ -66,41 +66,41 @@ git clone git@github.com:jixindev/gulp-boilerplate.git .; rm -rf trunk .git
 3. Install dependencies
 
 ```bash
-yarn install
+pnpm i
 ```
 
 ## Usage
 
 **Development**
 
-Run `yarn dev` to start the development server. This will compile Sass, minify JavaScript, optimize images, and set up live reloading.
+Run `pnpm dev` to start the development server. This will compile Sass, minify JavaScript, optimize images, and set up live reloading.
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 **Compilation**
 
-Run `yarn compile` to compile all assets without starting the development server.
+Run `pnpm compile` to compile all assets without starting the development server.
 
 ```bash
-yarn compile
+pnpm compile
 ```
 
 **Production build**
 
-Run `yarn build` to create a production-ready build of your project. This will minify all assets and prepare them for deployment.
+Run `pnpm build` to create a production-ready build of your project. This will minify all assets and prepare them for deployment.
 
 ```bash
-yarn build
+pnpm build
 ```
 
 **Add pug component**
 
-Run `yarn pug --add=ComponentName` to create a new Pug component with the specified name.
+Run `pnpm pug --add=ComponentName` to create a new Pug component with the specified name.
 
 ```bash
-yarn pug --add=ComponentName
+pnpm pug --add=ComponentName
 ```
 
 ## Project structure
